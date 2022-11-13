@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding:0;  
+}
+
+
+:root {
+    --first-color: #9DDAC6;
+    --second-color: #FF4848;
+    --third-color: #FFD371;
+    --logo-color: #47B5FF;
+}
+
+body {
+    background: var(--first-color);
+    font-family: "Roboto", sans-serif;
+    height: 100vh;  
+}
+
+nav {
+    align-itens: center;
+    background: var(--second-color);
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 5%; 
+}
+
+#ice {
+    color: var(--third-color);
+}
+
+#cream {
+    color: var(--first-color);
+    font-weight: bold;
+}
+
+#lovers {
+    font-family: 'Dancing Script', cursive;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.logo {
+    color: var(--logo-color);
+    cursor: pointer;
+    font-size: 22px;
+}
+
+ul {
+    list-style: none;
+    margin-top: 7px;
+}
+
+ul li {
+    display: inline-block;
+}
+
+ul li a {
+    border-radius: 7px;
+    color: var(--third-color);
+    font-weight: bold;
+    font-size: 1.3em;
+    padding: 8px 38px;
+    transition: all .5s ease; 
+    text-decoration: none;  
+}
+
+ul li a:hover {
+    background-color: var(--first-color);
+    color:var(--second-color);
+}
+
+
+#icon {
+    background-color: var(--first-color);
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 5px 7px 2px 7px;	
+    transition: all .3s ease;
+}
+
+#icon svg {
+    color: var(--second-color);
+    height: 28px;
+    transition: all .3s ease;
+}
+
+
+#checkbox, #icon {
+    display: none;
+}
+
+@media screen and (max-width: 884px) {
+    nav {
+        border-botton: 2px solid red;
+    }
+   ul {
+    display: none;
+    background-color: var(--first-color);
+    height: calc(100vh - 75px);
+    left: 0;
+    margin-top: 70px;
+    position: absolute;
+    text-align: center; 
+    top: 0;
+    width: 100%;
+    }
+
+   ul li {
+    background-color: var(--second-color);
+    border-radius: 20px;
+    display: block;
+    margin: 20px 40px 20px 40px;
+    padding: 10px 15px;
+   }
+
+   ul li a {
+    display: block;
+    padding: 10px 0;
+   }
+
+   #icon {
+    display: block;
+   }
+   #checkbox:checked ~ ul {
+    display: block;
+   }
+}
+
